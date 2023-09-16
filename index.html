@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile Data Collection</title>
+</head>
+<body>
+    <header>
+        <h1>Mobile Data Collection</h1>
+    </header>
+    
+    <main>
+        <section id="data-entry">
+            <form id="mobileForm">
+                <div class="form-group">
+                    <label for="brand">Choose a Brand:</label>
+                    <select id="brand" name="brand">
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Google">Google</option>
+                        <!-- Add more brand options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="model">Choose a Model:</label>
+                    <select id="model" name="model">
+                        <!-- Models will be populated dynamically based on the selected brand -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="usageYears">Years of Usage:</label>
+                    <input type="number" id="usageYears" name="usageYears" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="futureModel">Future Model:</label>
+                    <input type="text" id="futureModel" name="futureModel" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="data-display">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Years of Usage</th>
+                        <th>Future Model</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody">
+                    <!-- Data will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
